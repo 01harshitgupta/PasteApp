@@ -29,11 +29,9 @@ h2 {
 
 .search-box {
   margin: 20px;
-  
 }
 
 .search-box input {
-  
   width: 100%;
   padding: 10px;
   background-color: #111;
@@ -48,6 +46,7 @@ h2 {
   align-items: center;
   margin-top: 20px;
   border: 2px solid white;
+  flex-wrap: wrap; /* allow wrap for very small screens but keep row layout */
 }
 
 .paste-card {
@@ -67,8 +66,6 @@ h2 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 6px;
-  
-
 }
 
 .paste-content {
@@ -76,14 +73,12 @@ h2 {
   font-weight: 400;
   color: #ccc;
   margin-bottom: 20px;
-  
 }
 
 .paste-actions {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
-  
 }
 
 .paste-actions button {
@@ -93,6 +88,7 @@ h2 {
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .paste-actions button:hover {
@@ -117,26 +113,29 @@ h2 {
   color: inherit;
   cursor: pointer;
 }
-.Nav-class{
-  
-   display: flex;
+
+.Nav-class {
+  display: flex;
   justify-content: flex-end;
   gap: 2rem;
   padding: 1rem 2rem;
   background-color: #1e1e1e;
 }
-.home-form{
+
+.home-form {
   display: flex;
   gap: 15px;
   border-radius: 20px;
 }
-.home-button{
+
+.home-button {
   width: 15rem;
   height: 3rem;
   margin-top: 19px;
   border-radius: 20px;
   padding: 5px;
 }
+
 .Nav-class a {
   color: white;
   font-weight: bold;
@@ -151,4 +150,11 @@ h2 {
 
 .Nav-class .active {
   color: #22c55e;
+}
+
+/* ✅ Media query: just minor tweaks, no layout changes */
+@media (max-width: 768px) {
+  .paste-card {
+    width: 95%;
+  }
 }
